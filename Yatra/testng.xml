@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="none">
+	<test name="SighinUp Test">
+		<classes>
+			<class name="com.Yatra.automationscript.SighinUp" />
+		</classes>
+	</test> <!-- Test -->
+	<test name="SighinInTest">
+		<classes>
+			<class name="com.Yatra.automationscript.SighinIn" />
+		</classes>
+	</test> <!-- Test -->
+	<test name="FlightOneWay Test">
+		<classes>
+			<class name="com.Yatra.automationscript.FlightOneWay" />
+		</classes>
+	</test> <!-- Test -->
+	<test name="FlightTowWay Test">
+		<classes>
+			<class name="com.Yatra.automationscript.FlightTowWay" />
+		</classes>
+	</test> <!-- Test -->
+	<test name="FlightMulticity Test">
+		<classes>
+			<class name="com.Yatra.automationscript.FlightMulticity" />
+		</classes>
+	</test> <!-- Test -->
+	  <listeners>
+  <listener class-name="atu.testng.reports.listeners.ATUReportsListener"></listener>
+  <listener class-name="atu.testng.reports.listeners.ConfigurationListener"></listener>
+  <listener class-name="atu.testng.reports.listeners.MethodListener"></listener>
+  </listeners>   
+</suite> <!-- Suite -->
