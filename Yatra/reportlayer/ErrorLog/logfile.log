@@ -1,70 +1,14 @@
-2014-09-03 02:16:37,942 INFO  [FlightOneWay] openFireFox 
-2014-09-03 02:16:50,745 INFO  [FlightOneWay] url load 
-2014-09-03 02:17:08,310 INFO  [Exceldatamanager] creat object Of Hssfsheet 
-2014-09-03 02:17:08,310 INFO  [Exceldatamanager] loade file of excel sheet 
-2014-09-03 02:17:08,319 INFO  [FlightOneWay] size of excel sheet1 
-2014-09-03 02:17:08,581 INFO  [FlightOneWay] chake 2 botten click ya not  
-2014-09-03 02:17:14,794 INFO  [FlightOneWay] all rady clicked 
-2014-09-03 02:17:14,795 INFO  [FlightOneWay] Leaving from data sent:New Delhi, India (DEL) 
-2014-09-03 02:17:15,073 INFO  [FlightOneWay] going to data:Mumbai, India (BOM) 
-2014-09-03 02:17:15,354 INFO  [FlightOneWay] depatur date click 
-2014-09-03 02:17:15,703 INFO  [FlightOneWay] moth selcted 
-2014-09-03 02:17:15,703 INFO  [FlightOneWay] date selected 
-2014-09-03 02:17:15,703 INFO  [FlightOneWay] call the calder selcttion method with pass paramiter moth and date 
-2014-09-03 02:17:16,068 INFO  [FlightOneWay] click retin date 
-2014-09-03 02:17:16,513 INFO  [FlightOneWay] agine call the calder method 
-2014-09-03 02:17:17,358 INFO  [FlightOneWay] traveler mamber select  
-2014-09-03 02:17:17,798 INFO  [FlightOneWay] adul selct 
-2014-09-03 02:17:18,042 INFO  [FlightOneWay] click adult button 
-2014-09-03 02:17:18,042 INFO  [FlightOneWay] select wich adualt opction 
-2014-09-03 02:17:18,255 INFO  [FlightOneWay] children selection 
-2014-09-03 02:17:18,644 INFO  [FlightOneWay] infants selection 
-2014-09-03 02:17:19,179 INFO  [FlightOneWay] class selction 
-2014-09-03 02:17:40,484 INFO  [FlightOneWay] totalFee:18,488 
-2014-09-03 02:22:36,754 INFO  [FlightOneWay] openFireFox 
-2014-09-03 02:22:51,531 INFO  [FlightOneWay] url load 
-2014-09-03 02:23:26,476 INFO  [Exceldatamanager] creat object Of Hssfsheet 
-2014-09-03 02:23:26,476 INFO  [Exceldatamanager] loade file of excel sheet 
-2014-09-03 02:23:26,485 INFO  [FlightOneWay] size of excel sheet1 
-2014-09-03 02:23:26,792 INFO  [FlightOneWay] chake 2 botten click ya not  
-2014-09-03 02:23:32,244 INFO  [FlightOneWay] all rady clicked 
-2014-09-03 02:23:32,244 INFO  [FlightOneWay] Leaving from data sent:New Delhi, India (DEL) 
-2014-09-03 02:23:32,604 INFO  [FlightOneWay] going to data:Mumbai, India (BOM) 
-2014-09-03 02:23:32,965 INFO  [FlightOneWay] depatur date click 
-2014-09-03 02:23:33,314 INFO  [FlightOneWay] moth selcted 
-2014-09-03 02:23:33,314 INFO  [FlightOneWay] date selected 
-2014-09-03 02:23:33,315 INFO  [FlightOneWay] call the calder selcttion method with pass paramiter moth and date 
-2014-09-03 02:23:33,797 INFO  [FlightOneWay] click retin date 
-2014-09-03 02:23:33,994 INFO  [FlightOneWay] agine call the calder method 
-2014-09-03 02:23:34,856 INFO  [FlightOneWay] traveler mamber select  
-2014-09-03 02:23:35,424 INFO  [FlightOneWay] adul selct 
-2014-09-03 02:23:35,951 INFO  [FlightOneWay] click adult button 
-2014-09-03 02:23:35,951 INFO  [FlightOneWay] select wich adualt opction 
-2014-09-03 02:23:36,135 INFO  [FlightOneWay] children selection 
-2014-09-03 02:23:36,454 INFO  [FlightOneWay] infants selection 
-2014-09-03 02:23:37,003 INFO  [FlightOneWay] class selction 
-2014-09-03 02:27:33,208 INFO  [FlightOneWay] openFireFox 
-2014-09-03 02:27:50,908 INFO  [FlightOneWay] url load 
-2014-09-03 02:29:08,549 INFO  [Exceldatamanager] creat object Of Hssfsheet 
-2014-09-03 02:29:08,549 INFO  [Exceldatamanager] loade file of excel sheet 
-2014-09-03 02:29:08,558 INFO  [FlightOneWay] size of excel sheet1 
-2014-09-03 02:29:08,831 INFO  [FlightOneWay] chake 2 botten click ya not  
-2014-09-03 02:29:14,917 INFO  [FlightOneWay] all rady clicked 
-2014-09-03 02:29:14,918 INFO  [FlightOneWay] Leaving from data sent:New Delhi, India (DEL) 
-2014-09-03 02:29:15,173 INFO  [FlightOneWay] going to data:Mumbai, India (BOM) 
-2014-09-03 02:29:15,418 INFO  [FlightOneWay] depatur date click 
-2014-09-03 02:29:18,469 INFO  [FlightOneWay] moth selcted: 
-2014-09-03 02:29:18,470 INFO  [FlightOneWay] date selected:October 2014 
-2014-09-03 02:29:18,470 INFO  [FlightOneWay] call the calder selcttion method with pass paramiter moth and date 
-2014-09-03 02:29:19,339 INFO  [FlightOneWay] click retin date 
-2014-09-03 02:29:19,682 INFO  [FlightOneWay] agine call the calder method 
-2014-09-03 02:29:20,060 INFO  [FlightOneWay] traveler mamber select  
-2014-09-03 02:29:20,594 INFO  [FlightOneWay] adul selct 
-2014-09-03 02:29:20,747 INFO  [FlightOneWay] click adult button 
-2014-09-03 02:29:20,748 INFO  [FlightOneWay] select wich adualt opction 
-2014-09-03 02:29:20,913 INFO  [FlightOneWay] children selection 
-2014-09-03 02:29:21,206 INFO  [FlightOneWay] infants selection 
-2014-09-03 02:29:21,868 INFO  [FlightOneWay] class selction 
-2014-09-03 02:29:52,228 INFO  [FlightOneWay] totalFee:18,490 
-2014-09-07 04:02:01,925 INFO  [SighinUp] openFireFox 
-2014-09-07 04:21:35,359 INFO  [SighinUp] openFireFox 
+2014-09-14 15:39:32,966 INFO  [FlightTowWay] openFireFox 
+2014-09-14 15:39:38,721 INFO  [FlightTowWay] url load 
+2014-09-14 15:41:03,958 INFO  [FlightTowWay] chake 2 botten click ya not  
+2014-09-14 15:41:25,096 INFO  [FlightTowWay] quit the Browser 
+2014-09-14 15:48:11,818 INFO  [FlightTowWay] openFireFox 
+2014-09-14 15:48:20,360 INFO  [FlightTowWay] url load 
+2014-09-14 15:52:27,847 INFO  [FlightTowWay] openFireFox 
+2014-09-14 15:52:32,985 INFO  [FlightTowWay] url load 
+2014-09-14 15:59:23,228 INFO  [FlightTowWay] openFireFox 
+2014-09-14 15:59:28,882 INFO  [FlightTowWay] url load 
+2014-09-14 16:01:06,172 INFO  [FlightTowWay] chake 2 botten click ya not  
+2014-09-14 16:02:10,413 INFO  [FlightTowWay] quit the Browser 
+2014-09-14 17:33:11,780 INFO  [FlightTowWay] openFireFox 
+2014-09-14 17:33:30,117 INFO  [FlightTowWay] url load 

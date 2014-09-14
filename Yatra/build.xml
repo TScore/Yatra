@@ -1,38 +1,24 @@
- <project name="Automation" default="clean" basedir=".">
-    <property name="build.dir" value="${basedir}/build"/>
-    <property name="lib.dir" value="${basedir}/SeleniuamJar/allJar"/>
+<project name="Automation" default="clean" basedir=".">
+    <property name="build.dir" value="${basedir}/reportlayer/build"/>
+    <property name="lib.dir" value="${basedir}/lib"/>
     <property name="src.dir" value="${basedir}/src"/>
-    <property name="browser" value="test-output"/> 
-    
-  
-    <property name="LIB" value="${basedir}/SeleniuamJar/lib" />
-    <property name="BIN" value="${basedir}/bin" />
-    
-
-    <path id="master-classpath">
-        <pathelement location="${BIN}" />
-        <fileset dir="${LIB}" includes="*.jar"/>
-    </path>  
-
-    
-  <target name="setClassPath">
+    <property name="browser" value="/home/nxavier/Downloads/firefox/firefox"/>
+    <target name="setClassPath">
         <path id="classpath_jars">
             <pathelement path="${basedir}/" />
             <fileset dir="${lib.dir}" includes="*.jar" />
         </path>
         <pathconvert pathsep=":" property="test.classpath" refid="classpath_jars" />
-    </target> 
-    
+    </target>
     <target name="loadTestNG" depends="setClassPath">
         <taskdef resource="testngtasks" classpath="${test.classpath}"/>
     </target>
-    
     <target name="init">
         <mkdir dir="${build.dir}"/>
         <tstamp>
             <format property="timestamp" pattern="dd-MM-yyyy_(HH-mm-ss)"/>
         </tstamp>
-        <property name="build.log.dir" location="${basedir}/buildlogs"/>
+        <property name="build.log.dir" location="${basedir}/reportlayer/buildlogs"/>
         <mkdir dir="${build.log.dir}"/>
         <property name="build.log.filename" value="build_${timestamp}.log"/>
         <record name="${build.log.dir}/${build.log.filename}" loglevel="verbose" append="false"/>
@@ -45,10 +31,9 @@
     <target name="compile" depends="clean,init,setClassPath,loadTestNG">
         <echo message="classpath:${test.classpath}"/>
         <echo message="compiling.........."/>
-        <javac destdir="${build.dir}" srcdir="${src.dir}" classpath="${test.classpath}"  includeantruntime="false"/>
+        <javac destdir="${build.dir}" srcdir="${src.dir}" classpath="${test.classpath}"/>
     </target>
-
-	<target name="copyTask">
+    	<target name="copyTask">
 		<copy todir="${build.dir}">
 			<fileset dir="${src.dir}">
 				<exclude name="**/*.java" />
@@ -59,7 +44,7 @@
     
       <target name="jar" depends="compile, copyTask">
            <echo message="[ZIP]creating zip file"/>
-       		<zip destfile="${build.dir}/ciscomap.jar" basedir="${build.dir}" 
+       		<zip destfile="${build.dir}/yatra.jar" basedir="${build.dir}" 
        		 />
     </target>
     
@@ -67,38 +52,32 @@
         <property file="${basedir}/src/CiscoMap.properties"/>
         <property file="${basedir}/src/atu.properties"/>
           </target>  
-        
-    <target name="runTests" depends="compile, copyTask">
+          
+    <target name="runTests" depends="compile,jar">
         <testng classpath="${test.classpath}:${build.dir}">
             <xmlfileset dir="${basedir}" includes="testng.xml"/>
         </testng>
     </target>
-    
-    
-     
-   <target name="generateReport" depends="runTests">
-        <delete dir="${basedir}/testng-xslt">
-        </delete>
-        <mkdir dir="${basedir}/testng-xslt">
-        </mkdir>
-        <xslt in="${basedir}/test-output/testng-results.xml" style="${basedir}/src/resources/testng-results.xsl" out="${basedir}/testng-xslt/index.html">
-            <param expression="${basedir}/testng-xslt/" name="testNgXslt.outputDir" />
-            <param expression="true" name="testNgXslt.sortTestCaseLinks" />
-            <param expression="FAIL,SKIP,PASS,CONF,BY_CLASS" name="testNgXslt.testDetailsFilter" />
-            <param expression="true" name="testNgXslt.showRuntimeTotals" />
-            <classpath refid="master-classpath">
-            </classpath>
+    <target name="report" depends="runTests">
+        <delete dir="${basedir}/reportlayer/testng-xslt"/>
+        <mkdir dir="${basedir}/reportlayer/testng-xslt"/>
+        <xslt in="${basedir}/test-output/testng-results.xml"
+        style="${basedir}/src/com/Yatra/dblayer/testng-results.xsl" out="${basedir}/reportlayer/testng-xslt/index.html" processor="SaxonLiaison">
+            <param expression="${basedir}/reportlayer/testng-xslt/" name="testNgXslt.outputDir"/>
+            <param expression="true" name="testNGXslt.sortTestCaseLinks"/>
+            <param expression="FAIL,SKIP,PASS,BY_CLASS" name="testNgXslt.testDetailsFilter"/>
+            <param expression="true" name="testNgXslt.showRuntimeTotals"/>
+            <classpath refid="classpath_jars"/>
         </xslt>
     </target>
-    
-    <target name="RunAndViewReport" depends="generateReport">
-        <exec executable="${browser}" spawn="yes">
-       <arg line="'${basedir}/testng-xslt/index.html'" />
+    <target name="RunAndViewReport" depends="report"> 
+        <exec executable="${browser}" spawn="yes"> 
+       <arg line="'${basedir}/reportlayer/TestReport/testng-xslt/index.html'" /> 
       </exec>
      </target>
     <target name="sendMail" depends="RunAndViewReport">
-        <zip destfile="${basedir}/testng-xslt/Report.zip" basedir="${basedir}/testng-xslt"/>
-        <mail mailhost="smtp.gmail.com" mailport="465" subject="Notification of TESTNG build" ssl="false" user="tapana.kumar@girmiti.com" password="password">
+        <zip destfile="${basedir}/reportlayer/TestReport/testng-xslt/Report.zip" basedir="${basedir}/reportlayer/TestReport/testng-xslt"/>
+        <mail mailhost="smtp.gmail.com" mailport="465" subject="Notification of TESTNG build" ssl="false" user="tester@gmail.com" password="password">
             <from address="tester@gmail.com"/>
             <to address="tester@gmail.com"/>
             <message>The build has finished. A details report of this build is aatched</message>
@@ -110,6 +89,3 @@
         </mail>
     </target>
 </project>
-
-
-
